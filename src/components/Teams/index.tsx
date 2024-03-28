@@ -9,7 +9,7 @@ const Teams = () => {
     return (
       <TeamsContainer>
         <h1>Teams</h1>
-        <Team/>
+        <Team nome={"Time Nº 1"}/>
       </TeamsContainer>  
     ); 
 }

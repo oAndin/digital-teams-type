@@ -18,11 +18,15 @@ const TeamContainer = styled.div`
   }
 `;
 
-const Team = () => {
+interface TeamProps {
+  nome:string;
+}
+
+const Team = ({nome}:TeamProps) => {
   return (
     <TeamContainer>
       <h5>
-        Nome do time <i className="pi pi-eye"></i>
+        {nome}<i className="pi pi-eye"></i>
       </h5>
       <h1>0/0</h1>
       <div className="acoes">
