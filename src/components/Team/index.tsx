@@ -20,15 +20,17 @@ const TeamContainer = styled.div`
 
 interface TeamProps {
   nome:string;
+  capacidade:number;
+  integrantes:string[];
 }
 
-const Team = ({nome}:TeamProps) => {
+const Team = ({nome, capacidade = 0, integrantes = []}:TeamProps) => {
   return (
     <TeamContainer>
       <h5>
         {nome}<i className="pi pi-eye"></i>
       </h5>
-      <h1>0/0</h1>
+      <h1><span>{integrantes.length}</span>/<span>{capacidade}</span></h1>
       <div className="acoes">
         <Button label="Adicionar" />
         <Button icon={"pi pi-trash"} />
